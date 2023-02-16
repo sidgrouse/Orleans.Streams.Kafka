@@ -12,12 +12,7 @@
     <PackageReference Include="Confluent.Kafka" Version="$(ConfluentKafkaVersion)" />
     <PackageReference Include="Confluent.SchemaRegistry.Serdes" Version="1.3.0" />
   </ItemGroup>
-  <!-- packages -->
-  <ItemGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageReference Include="Orleans.Streams.Utils" Version="$(StreamUtilsVersion)" />
-  </ItemGroup>
-  <!-- libraries -->
-  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+  <ItemGroup>
     <ProjectReference Include="..\..\Orleans.Streams.Utils\Orleans.Streams.Utils\Orleans.Streams.Utils.csproj" />
   </ItemGroup>
 </Project>
